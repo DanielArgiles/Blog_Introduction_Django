@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Portada</title> <! título de la ventana>
+	</head>
+
+	<body text="RED">
+		<h1>Bienvenido a mi blog</h1> <! título o encabezado>
+		
+		{% for post in posts %}
+		<div>
+			<h2> {{post.title}} </h2>
+			<p> <a href="/blog/{{post.pk}}"> Leer más </a></p> <! pk (primary key) hace referencia al ido, también se puede dejar como id>
+		</div>
+		{% endfor %}
+	</body>
+
+</html>
